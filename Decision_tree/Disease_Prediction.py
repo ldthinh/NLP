@@ -29,9 +29,9 @@ cols_data_test = symptoms_cols[:-1]
 data_test_x = datatest_df[cols_data_test]
 data_test_y = datatest_df['prognosis']
 print(type(data_test_x))
-results = train_model.predict([data_test_x.iloc[0]])
-probal = train_model.predict_proba([data_test_x.iloc[0]])
-
+# results = train_model.predict([data_test_x.iloc[0]])
+# probal = train_model.predict_proba([data_test_x.iloc[0]])
+results = train_model.predict(data_test_x)
 # check result
 for i in range(len(results)):
     if data_test_y[i] != results[i]:
